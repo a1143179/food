@@ -84,5 +84,21 @@ class UrgentRecipeTest extends PHPUnit_Framework_TestCase{
 		$this->assertEquals($urgentRecipe, 'beef and rice');		
 	}
 	
+	/**
+	* @expectedException        Exception
+    * @expectedExceptionMessage Fridge and recipe should be arrays.
+    * */
+	public function testNullFridge(){
+		$siteModel = new SiteModel();
+		$urgentRecipe = $siteModel->findWhatToCook(null, $this->recipe);
+	}
 	
+	/**
+	* @expectedException        Exception
+    * @expectedExceptionMessage Fridge and recipe should be arrays.
+    * */
+	public function testNullRecipe(){
+		$siteModel = new SiteModel();
+		$urgentRecipe = $siteModel->findWhatToCook($this->fridge, null);
+	}
 }
