@@ -91,6 +91,9 @@ class SiteModel {
 		$availableRecipes = array();
 		$urgentMaterialDate = null;
 		$urgentRecipe = null;
+		if(!is_array($fridgeArray) || !is_array($recipeArray)){
+			throw new Exception('Fridge and recipe should be arrays.');
+		}
 		foreach($recipeArray as $recipe){
 			$recipeAvailable = true;
 			foreach($recipe['ingredients'] as $ingredient){
