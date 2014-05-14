@@ -13,3 +13,5 @@ Note:
 2. Unit tests are in food\food\protected\tests\unit\UrgentRecipeTest.php
 
 3. Project files (models, views and controllers) are in the folder food\food\protected
+
+4. Screenshots are in the food\screenshots folder
