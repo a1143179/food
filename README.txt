@@ -1,5 +1,7 @@
 Recommanded Environment: PHP 5.4.7
 
+This project i based on the Yii Framework.
+
 Installation Steps:
 
 1. git clone 
